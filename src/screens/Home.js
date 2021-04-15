@@ -1,10 +1,12 @@
 import React from 'react';
 import InputFile from "../component/InputFile";
+import Accordion from "../component/Accordion";
 
 const Home = () => {
     return (
-        <div>
+        <div className="d-flex">
             <InputFile/>
+            <Accordion/>
         </div>
     );
 };
