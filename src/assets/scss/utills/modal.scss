@@ -1,0 +1,138 @@
+.modal {
+  display: none;
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  z-index: 99;
+  background-color: rgba(0, 0, 0, 0.6);
+
+  &__wrapper {
+    width: 90%;
+    height: 450px;
+    max-width: 360px;
+    margin:0 auto;
+    border-radius: 16px;
+    box-shadow: 0 -3px 10px 0 rgba(0, 0, 0, 0.04);
+    background-color: #ffffff;
+
+    /* 팝업이 열릴때 스르륵 열리는 효과 */
+    animation: modal-show .3s;
+    overflow: hidden;
+  }
+
+  &__title {
+
+    height: 16px;
+    margin: 35px 113px 30px;
+
+    font-size: 16px;
+    font-weight: bold;
+    line-height: 1;
+    letter-spacing: -0.2px;
+    text-align: center;
+    color: #343437;
+  }
+
+  &__tabs {
+
+    //height: 14px;
+    //margin: 0 73px 14px;
+    margin: 0 23px;
+
+
+    font-size: 14px;
+    font-weight: bold;
+
+    line-height: 1;
+    letter-spacing: -0.2px;
+    text-align: center;
+    color: #1d1d1f;
+
+    //border-bottom: #1d1d1f;
+    //border-radius: 2px;
+    //background-color:
+
+    .tabs-active {
+      border-bottom: 1px solid #1d1d1f;
+
+      padding: 0px 52px 14px;
+      //padding-bottom: 14px ;
+    }
+
+    .tabs-no-active {
+      border-bottom: 1px solid #8b8b91;
+
+      padding: 0px 52px 14px;
+      color: #8b8b91;
+    }
+  }
+
+  &__footer {
+    display: grid;
+    place-content: center;
+
+    .confirm_button {
+      width: 320px;
+      height: 48px;
+
+      margin-bottom: 10px;
+
+      font-size: 14px;
+      font-weight: 500;
+      text-align: center;
+      color: #ffffff;
+
+      padding: 15px 145px;
+      border-radius: 4px;
+      border: none;
+      background-color: #6e91f0;
+    }
+
+    .cancel_button {
+      width: 320px;
+      height: 48px;
+
+      margin-bottom: 10px;
+
+      font-size: 14px;
+      font-weight: 500;
+      text-align: center;
+      color: #343437;
+
+      padding: 15px 145px;
+      border-radius: 4px;
+      background: none;
+      border: solid 1px #8b8b91;
+    }
+  }
+
+  &.modal-active {
+    display: flex;
+    align-items: center;
+    /* 팝업이 열릴때 스르륵 열리는 효과 */
+    animation: modal-bg-show .3s;
+
+  }
+}
+
+
+@keyframes modal-show {
+  from {
+    opacity: 0;
+    margin-bottom: -50px;
+  }
+  to {
+    opacity: 1;
+    margin-top: 0;
+  }
+}
+@keyframes modal-bg-show {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}

@@ -1,0 +1,33 @@
+.tab {
+    //height: 14px;
+    //margin: 0 73px 14px;
+    margin: 0 23px;
+
+
+    font-size: 14px;
+    font-weight: bold;
+
+    line-height: 1;
+    letter-spacing: -0.2px;
+    text-align: center;
+    color: #1d1d1f;
+
+    //border-bottom: #1d1d1f;
+    //border-radius: 2px;
+    //background-color:
+
+    .tabs-active {
+      border-bottom: 1px solid #1d1d1f;
+
+      padding: 0px 52px 14px;
+      //padding-bottom: 14px ;
+    }
+
+    .tabs-no-active {
+      border-bottom: 1px solid #8b8b91;
+
+      padding: 0px 52px 14px;
+      color: #8b8b91;
+    }
+
+}

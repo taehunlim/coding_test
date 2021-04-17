@@ -1,6 +1,16 @@
 @import "node_modules/bootstrap/scss/bootstrap";
+@import "node_modules/slick-carousel/slick/slick";
+
 
 @import "./inputFile";
 @import "./accordion";
+@import "./timePicker";
+
+
+@import "utills/modal";
+@import "utills/tab";
+
+
+@import "./custom/slick";
 
 
