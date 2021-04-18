@@ -58,6 +58,9 @@
       }
     }
     .has-arrow {
+      &:hover {
+        cursor: pointer;
+      }
       &:after {
 
         //content: url("../../images/arrow_accordion.svg");

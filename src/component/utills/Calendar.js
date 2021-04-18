@@ -102,7 +102,10 @@ const Calendar = ({title}) => {
                         }}
                     >
 
-                        <img src="../../../images/arrow_l.svg"/>
+                        <img
+                            src="../../../images/arrow_l.svg"
+                            alt="prev month"
+                        />
 
                     </button>
 
@@ -119,7 +122,10 @@ const Calendar = ({title}) => {
                             )
                         }}
                     >
-                        <img src="../../../images/arrow_r.svg"/>
+                        <img
+                            src="../../../images/arrow_r.svg"
+                            alt="next month"
+                        />
 
                     </button>
                 </div>

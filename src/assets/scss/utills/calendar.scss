@@ -41,7 +41,7 @@
     .month{
 
       cursor:pointer;
-      width: 23px;
+      width: 29px;
       height: 15px;
 
       margin: 0px 11px;
@@ -66,6 +66,7 @@
       &:first-child{
         cursor: initial;
         .box{
+          width: 54px;
           font-weight: bold;
           //&:hover > .text{
           //  background-color: white;

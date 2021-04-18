@@ -22,7 +22,7 @@ const TimePicker = () => {
     const [timeSet, setTimeSet] = useState({})
 
     const hours = [];
-    for (let i = 0; i < 13; i++ ) {
+    for (let i = 1; i < 13; i++ ) {
         hours.push(("0" + i).slice(-2));
     }
 
@@ -61,20 +61,26 @@ const TimePicker = () => {
     }
 
     const tabsItem = [
-        {
-            id: 0,
-            title: "운영 시간",
-            content: "I'm the content of the Section 1"
-        },
-        {
-            id: 1,
-            title: "운영 종료",
-            content: "I'm the content of the Section 2"
-        }
+        { title: "운영 시간" },
+        { title: "운영 종료" }
     ];
 
-    console.log("운영 시작 시간 :", startFormData.hour, ":", startFormData.minute )
-    console.log("운영 종료 시간 :", endFormData.hour, ":", endFormData.minute )
+    console.log(
+        "운영 시작 시간 :",
+        startFormData.apm === "AM"
+            ? startFormData.hour
+            : Number(startFormData.hour) + 12,
+        ":",
+        startFormData.minute
+    )
+    console.log(
+        "운영 종료 시간 :",
+        endFormData.apm === "AM"
+            ? endFormData.hour
+            : (Number(endFormData.hour) + 12),
+        ":",
+        endFormData.minute
+    )
 
     return (
         <div className="timepicker">
@@ -125,8 +131,9 @@ const TimePicker = () => {
                 </div>
             </div>
 
-            <Modal
+            {/*TimePicker Detail*/}
 
+            <Modal
                 //tabs
                 tabsItem={tabsItem}
                 initialTab={timeSet}

@@ -9,9 +9,8 @@ import DatePicker from "../component/DatePicker";
 const Home = () => {
     return (
         <div
-            className="d-flex"
+            className="d-flex justify-content-center"
             style={{
-                justifyContent: "center",
                 height: "640px"
             }}
         >

@@ -1,19 +1,8 @@
-import React, {useState} from 'react';
-import Dropzone from 'react-dropzone';
+import React from 'react';
 
+import UploadFile from "./utills/UploadFile";
 
-const Input = () => {
-
-    const [selectedFiles, setSelectedFiles] = useState([]);
-
-    const handleAcceptedFiles = files => {
-        files.map(file => {
-            Object.assign(file, {
-                preview: URL.createObjectURL(file),
-            })
-        });
-        setSelectedFiles(files)
-    };
+const InputFile = () => {
 
     return (
         <div className="input-file">
@@ -23,52 +12,8 @@ const Input = () => {
             </div>
 
             <form>
-                <Dropzone
-                    onDrop={acceptedFiles => handleAcceptedFiles(acceptedFiles)}
-                    multiple
-                >
-                    {({ getRootProps, getInputProps }) => (
-                        <div className="dropzone">
-                            <p className="Rectangle-title">
-                                오프라인 매장 서비스 메뉴
-                            </p>
-
-                            {!selectedFiles[0]
-                                ?
-                                <div
-                                    className="Rectangle"
-                                    {...getRootProps()}
-                                >
-                                    <input {...getInputProps()} />
-
-                                    <img
-                                        className="Rectangle__iconnavcamera"
-                                        src="images/icon-nav-camera.svg"
-                                    />
-
-                                    <p className="Rectangle__content">오프라인 매장 서비스 메뉴 사진 (가격정보 포함)</p>
-                                </div>
-                                :
-                                <div
-                                    className="Rectangle-preview"
-                                    {...getRootProps()}
-                                >
-                                    <input {...getInputProps()} />
-                                    {selectedFiles.map(f => {
-                                        return (
-                                            <img
-                                                alt={f.name}
-                                                src={f.preview}
-                                            />
-                                        );
-                                    })}
-                                </div>
-                            }
-                        </div>
-                    )}
-                </Dropzone>
+                <UploadFile/>
             </form>
-
 
             <p className="input-file__content">
                 - 매장 내 서비스 메뉴판으로 실제 매장내 비치 된 사진을 촬영해주세요. <br/>
@@ -80,4 +25,4 @@ const Input = () => {
     );
 };
 
-export default Input;
+export default InputFile;

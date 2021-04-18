@@ -1,20 +1,15 @@
 import React from 'react';
-import TimePickerDetail from "../timePicker/TimePickerDetail";
+
 import Tabs from './Tabs';
 
 const Modal = ({
     open,
-
     modalTitle,
+    content,
+
     tabsItem,
-    hours,
-    minutes,
-    formData,
-    setFormData,
-    handleSubmit,
     initialTab,
     activeTab,
-    content
 }) => {
     return (
         <div
@@ -33,14 +28,6 @@ const Modal = ({
                     />
 
                     {content}
-                    {/*<TimePickerDetail*/}
-                    {/*    close={close}*/}
-                    {/*    hours={hours}*/}
-                    {/*    minutes={minutes}*/}
-                    {/*    formData={formData}*/}
-                    {/*    setFormData={setFormData}*/}
-                    {/*    handleSubmit={handleSubmit}*/}
-                    {/*/>*/}
 
                 </div>
             ) : null }

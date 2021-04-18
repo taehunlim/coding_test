@@ -18,9 +18,6 @@ const Tabs = ({tabsItem, initialTab, activeTab}) => {
 
     const { currentItem, changeItem } = useTab(initialTab, tabsItem);
 
-    console.log("1", activeTab)
-    console.log("2", currentItem)
-
     return (
         <div className="tab d-flex justify-content-between">
             {tabsItem.map((tab, index) => (
