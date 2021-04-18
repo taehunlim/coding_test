@@ -1,6 +1,7 @@
 import React, {useState} from 'react';
 
 import Modal from "../utills/Modal";
+import TimePickerDetail from "./TimePickerDetail";
 
 const TimePicker = () => {
 
@@ -59,7 +60,7 @@ const TimePicker = () => {
         setModal(!modal)
     }
 
-    const item = [
+    const tabsItem = [
         {
             id: 0,
             title: "운영 시간",
@@ -125,15 +126,24 @@ const TimePicker = () => {
             </div>
 
             <Modal
+
+                //tabs
+                tabsItem={tabsItem}
+                initialTab={timeSet}
+                activeTab={setTimeSet}
+
+                //Modal
                 open={ modal }
                 close={() => setModal(!modal)}
                 modalTitle={"운영 시간 설정"}
-                items={item}
-                hours={hours}
-                minutes={minutes}
-                handleSubmit={handleSubmit}
-                initialTab={timeSet}
-                activeTab={setTimeSet}
+                content={
+                    <TimePickerDetail
+                        close={() =>setModal(!modal)}
+                        hours={hours}
+                        minutes={minutes}
+                        handleSubmit={handleSubmit}
+                    />
+                }
             />
         </div>
     );

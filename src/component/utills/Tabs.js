@@ -1,6 +1,6 @@
 import React, {useState} from 'react';
 
-const Tabs = ({items, initialTab, activeTab}) => {
+const Tabs = ({tabsItem, initialTab, activeTab}) => {
 
     const useTab = (initialTab, allTabs) => {
         const [currentIdx, setCurrentIdx] = useState(initialTab);
@@ -16,14 +16,14 @@ const Tabs = ({items, initialTab, activeTab}) => {
         };
     };
 
-    const { currentItem, changeItem } = useTab(initialTab, items);
+    const { currentItem, changeItem } = useTab(initialTab, tabsItem);
 
     console.log("1", activeTab)
     console.log("2", currentItem)
 
     return (
         <div className="tab d-flex justify-content-between">
-            {items.map((section, index) => (
+            {tabsItem.map((tab, index) => (
                 <div
                     key={index}
                     className={
@@ -32,8 +32,7 @@ const Tabs = ({items, initialTab, activeTab}) => {
                     onClick={() => changeItem(index)}
 
                 >
-
-                    {section.title}
+                    {tab.title}
                 </div>
             ))}
         </div>

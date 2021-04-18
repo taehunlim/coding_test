@@ -4,16 +4,17 @@ import Tabs from './Tabs';
 
 const Modal = ({
     open,
-    close,
+
     modalTitle,
-    items,
+    tabsItem,
     hours,
     minutes,
     formData,
     setFormData,
     handleSubmit,
     initialTab,
-    activeTab
+    activeTab,
+    content
 }) => {
     return (
         <div
@@ -26,19 +27,20 @@ const Modal = ({
                     </p>
 
                     <Tabs
-                        items={items}
+                        tabsItem={tabsItem}
                         initialTab={initialTab}
                         activeTab={activeTab}
                     />
 
-                    <TimePickerDetail
-                        close={close}
-                        hours={hours}
-                        minutes={minutes}
-                        formData={formData}
-                        setFormData={setFormData}
-                        handleSubmit={handleSubmit}
-                    />
+                    {content}
+                    {/*<TimePickerDetail*/}
+                    {/*    close={close}*/}
+                    {/*    hours={hours}*/}
+                    {/*    minutes={minutes}*/}
+                    {/*    formData={formData}*/}
+                    {/*    setFormData={setFormData}*/}
+                    {/*    handleSubmit={handleSubmit}*/}
+                    {/*/>*/}
 
                 </div>
             ) : null }

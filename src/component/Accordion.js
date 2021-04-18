@@ -13,11 +13,13 @@ const Accordion = () => {
 
     return (
         <div className="accordion">
+
+            {/*//border box*/}
             <div className="accordion-wrapper">
 
                 <p className="accordion__title">아코디언</p>
 
-                <div className="accordion_space"/>
+                <div className="space-bar"/>
 
                 <div className="accordion-header-title">자주 묻는 질문</div>
 
@@ -44,7 +46,7 @@ const Accordion = () => {
                                            dangerouslySetInnerHTML={{__html: list.contents}}
                                        />
                                    </div>
-                                   <div className="accordion_space"/>
+                                   <div className="space-bar"/>
                                 </>
                                 : ""
                             }

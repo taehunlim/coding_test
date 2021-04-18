@@ -5,17 +5,19 @@
   width: 360px;
   height: 640px;
   padding: 40px 20px 218px;
+  font-family: NotoSansCJKkr;
+  font-stretch: normal;
+  font-style: normal;
 
 
   &__title {
     width: 71px;
     height: 15px;
     margin: 0 124.5px 40px;
-    font-family: NotoSansCJKkr;
+
     font-size: 15px;
     font-weight: bold;
-    font-stretch: normal;
-    font-style: normal;
+
     line-height: 1;
     letter-spacing: normal;
     text-align: center;
@@ -26,11 +28,10 @@
     width: 320px;
     height: 132px;
     margin: 14px 0 0;
-    font-family: NotoSansCJKkr;
+
     font-size: 12px;
     font-weight: normal;
-    font-stretch: normal;
-    font-style: normal;
+
     line-height: 1.83;
     letter-spacing: -0.2px;
     color: #8b8b91;
@@ -40,11 +41,10 @@
     width: 141px;
     height: 13px;
     margin: 0 179px 8px 0;
-    font-family: NotoSansCJKkr;
+
     font-size: 13px;
     font-weight: 500;
-    font-stretch: normal;
-    font-style: normal;
+
     line-height: 1;
     letter-spacing: normal;
     color: #5c5c62;
@@ -70,11 +70,10 @@
       width: 229px;
       height: 12px;
       margin: 8px 0 0;
-      font-family: NotoSansCJKkr;
+
       font-size: 12px;
       font-weight: normal;
-      font-stretch: normal;
-      font-style: normal;
+
       line-height: 1;
       letter-spacing: -0.2px;
       text-align: center;

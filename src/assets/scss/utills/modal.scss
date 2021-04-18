@@ -17,7 +17,7 @@
     box-shadow: 0 -3px 10px 0 rgba(0, 0, 0, 0.04);
     background-color: #ffffff;
 
-    /* 팝업이 열릴때 스르륵 열리는 효과 */
+    /* 팝업이 열리는 효과 */
     animation: modal-show .3s;
     overflow: hidden;
   }
@@ -37,8 +37,6 @@
 
   &__tabs {
 
-    //height: 14px;
-    //margin: 0 73px 14px;
     margin: 0 23px;
 
 
@@ -50,15 +48,11 @@
     text-align: center;
     color: #1d1d1f;
 
-    //border-bottom: #1d1d1f;
-    //border-radius: 2px;
-    //background-color:
-
     .tabs-active {
       border-bottom: 1px solid #1d1d1f;
 
       padding: 0px 52px 14px;
-      //padding-bottom: 14px ;
+
     }
 
     .tabs-no-active {
@@ -111,7 +105,7 @@
   &.modal-active {
     display: flex;
     align-items: center;
-    /* 팝업이 열릴때 스르륵 열리는 효과 */
+    /* 팝업이 열리는 효과 */
     animation: modal-bg-show .3s;
 
   }

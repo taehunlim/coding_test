@@ -1,0 +1,150 @@
+
+.calendar{
+  font-family: NotoSansCJKkr;
+  font-stretch: normal;
+  font-style: normal;
+
+  &__head{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 12px 22px;
+
+    .title {
+
+      font-size: 15px;
+      font-weight: bold;
+
+
+      line-height: 1;
+
+      color: #1d1d1f;
+    }
+
+    button{
+      cursor: pointer;
+
+      display: inline-flex;
+      background: transparent;
+      border: none;
+
+      padding: 0px;
+
+      &:hover{
+        background-color: rgba(gray,0.1);
+      }
+      &:active{
+        background-color: rgba(gray,0.2);
+      }
+    }
+
+    .month{
+
+      cursor:pointer;
+      width: 23px;
+      height: 15px;
+
+      margin: 0px 11px;
+
+      font-size: 15px;
+      font-weight: bold;
+
+      line-height: 1;
+      letter-spacing: normal;
+      text-align: center;
+      color: #1d1d1f;
+    }
+  }
+
+  &__body{
+    height: 69px;
+
+    .weeks-row{
+
+      display: flex;
+      cursor: pointer;
+      &:first-child{
+        cursor: initial;
+        .box{
+          font-weight: bold;
+          //&:hover > .text{
+          //  background-color: white;
+          //}
+        }
+      }
+      .box{
+        .text{
+          color: #8b8b91;
+          font-size: 13px;
+          //border-radius: 100%;
+          display: initial;
+          align-self: center;
+          justify-content: center;
+
+          top: 50%;
+          left: 50%;
+
+          .date  {
+            font-size: 18px;
+          }
+        }
+
+        button {
+          border: none;
+          background: none;
+        }
+
+        position: relative;
+        display: inline-flex;
+        flex-direction: column;
+        text-align: center;
+        width: calc(100%/7);
+        height: 0;
+
+        padding: 16px 11px calc(100%/7);
+        font-size: 12pt;
+
+        //// -- Sunday color --
+        //&:first-child{
+        //  button {
+        //    color: red;
+        //  }
+        //}
+
+        //// -- saturday color --
+        //&:last-child{
+        //  button {
+        //    color: #588dff;
+        //  }
+        //}
+
+        //// -- other months --
+        //&.grayed{
+        //  button {
+        //    color: gray;
+        //  }
+        //}
+        //
+        //&:hover{
+        //  .text {
+        //    background-color: rgba(#588dff, 0.1);
+        //  }
+        //}
+
+        &.selected{
+          background-image: url("../../images/choiced_day.svg");
+          background-repeat: no-repeat;
+          background-position: center;
+          height: 69px;
+
+          .text {
+            color: #6e91f0;
+            //background-color: #6e91f0;
+
+          }
+        }
+
+      }
+    }
+  }
+}

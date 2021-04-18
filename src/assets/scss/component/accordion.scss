@@ -4,6 +4,7 @@
   padding: 40px 0 0;
   font-stretch: normal;
   font-style: normal;
+  font-family: NotoSansCJKkr;
 
   &-wrapper {
     border: 1px solid rgba(0, 0, 0, 0.125);
@@ -13,11 +14,10 @@
     width: 56px;
     height: 15px;
     margin: 40px 152px;
-    font-family: NotoSansCJKkr;
+
     font-size: 15px;
     font-weight: bold;
-    //font-stretch: normal;
-    //font-style: normal;
+
     line-height: 1;
     letter-spacing: normal;
     text-align: center;
@@ -28,11 +28,10 @@
   .accordion-header-title {
     padding: 22px 20px;
     //margin: 22px 20px;
-    font-family: NotoSansCJKkr;
+
     font-size: 15px;
     font-weight: bold;
-    //font-stretch: normal;
-    //font-style: normal;
+
     line-height: 1;
     letter-spacing: normal;
     color: #1d1d1f;
@@ -41,11 +40,10 @@
   .accordion-header {
     padding: 22px 20px;
     border-top: 1px solid rgba(0, 0, 0, 0.125);
-    font-family: NotoSansCJKkr;
+
     font-size: 14px;
     font-weight: normal;
-    //font-stretch: normal;
-    //font-style: normal;
+
     line-height: 1;
     letter-spacing: -0.2px;
     color: #343437;
@@ -61,8 +59,11 @@
     }
     .has-arrow {
       &:after {
+
+        //content: url("../../images/arrow_accordion.svg");
         font-family: "Font Awesome 5 Free";
         content: "\f107";
+
         font-weight: 900;
         display: block;
         float: right;
@@ -77,11 +78,10 @@
     height: 72px;
     margin: 0px 20px;
     padding-bottom: 22px;
-    font-family: NotoSansCJKkr;
+
     font-size: 14px;
     font-weight: normal;
-    //font-stretch: normal;
-    //font-style: normal;
+
     line-height: 1.71;
     letter-spacing: -0.2px;
     color: #5c5c62;
@@ -91,11 +91,5 @@
     }
   }
 
-  .accordion_space {
-    width: 360px;
-    height: 8px;
-
-    background-color: #f5f5f9;
-  }
-
 }
+
