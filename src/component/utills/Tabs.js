@@ -14,6 +14,7 @@ const Tabs = ({tabsItem, initialTab, activeTab}) => {
             currentItem: allTabs[currentIdx],
             changeItem: setCurrentIdx
         };
+
     };
 
     const { currentItem, changeItem } = useTab(initialTab, tabsItem);
@@ -27,7 +28,6 @@ const Tabs = ({tabsItem, initialTab, activeTab}) => {
                         `${currentItem.id === index ? "tabs-active" : "tabs-no-active"}`
                     }
                     onClick={() => changeItem(index)}
-
                 >
                     {tab.title}
                 </div>

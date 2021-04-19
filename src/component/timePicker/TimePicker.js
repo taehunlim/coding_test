@@ -5,6 +5,8 @@ import TimePickerDetail from "./TimePickerDetail";
 
 const TimePicker = () => {
 
+    // seTimeSet에
+
     const [ modal, setModal ] = useState(false);
 
     const [startFormData, setStartFormData] = useState({
@@ -61,8 +63,8 @@ const TimePicker = () => {
     }
 
     const tabsItem = [
-        { title: "운영 시간" },
-        { title: "운영 종료" }
+        { id: 0, title: "운영 시간" },
+        { id: 1, title: "운영 종료" }
     ];
 
     console.log(
