@@ -4,7 +4,7 @@ import InputFile from "../component/InputFile";
 const InputScreen = () => {
     return (
         <div
-            className="d-flex justify-content-center"
+            className="d-flex justify-content-center mt-5"
         >
             <InputFile/>
         </div>
